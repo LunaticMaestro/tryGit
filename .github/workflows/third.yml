@@ -24,12 +24,7 @@ jobs:
       steps:
         - name: step 5
           run: >
-            echo %date%
-            %time%
-        - name: step 6
-          run: |
-            echo %date% 
-            echo %time%
+            date
   job-3:
       runs-on: macos-latest
       needs: 
@@ -37,4 +32,4 @@ jobs:
         - job-2
       steps:
         - name: step 7
-          run: echo $(date)
+          run: date
