@@ -5,7 +5,7 @@ on:
     branches:
     - main
 env:
-  name: my-artifact
+  ARTIFACT_NAME: my-artifact
 
 jobs:
   gen-artifact:
@@ -16,5 +16,5 @@ jobs:
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2.3.1
         with:
-          name: "{{env.my-artifact}}"
+          name: "{{env.ARTIFACT_NAME}}"
           path: /home 
