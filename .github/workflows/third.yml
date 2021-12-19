@@ -30,3 +30,11 @@ jobs:
           run: |
             echo %date% 
             echo %time%
+  job-3:
+      runs-on: macos-latest
+      needs: 
+        - job-1
+        - job-2
+      steps:
+        - name: step 7
+          run: echo $(date)
