@@ -1,0 +1,13 @@
+name: list-files
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    
+jobs:
+  list-file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: list
+        run: ls -a
