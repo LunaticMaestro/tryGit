@@ -1,0 +1,21 @@
+name: challenge-auto
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  job-1 :
+      runs-on: ubuntu-latest
+      steps:
+        - name: step 1
+          uses: actions/checkout@v2
+        - name: step 2
+          run: "echo $(date)"
+        - name: step 3
+          run: >
+            echo $(date)
+        - name: step 4
+          run: |
+            echo $(date)
